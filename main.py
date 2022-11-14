@@ -42,12 +42,12 @@ def fibonacci_3(x):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         prog='Fibonacci',
-        description='Devuelve el n-avo número de la sucesión de fibonacci y el tiempo de ejecución',
+        description='Returns the n-term from the Fibonacci succession and its execution time',
     )
-    parser.add_argument('n')  # positional argument
+    parser.add_argument('nth', type=int, help="The n-term")  # positional argument
     args = parser.parse_args()
 
-    n = int(args.n)
+    n = args.n
     start_time = time.time()
     print(fibonacci_1(n))
     print("--- %s seconds ---" % (time.time() - start_time))
