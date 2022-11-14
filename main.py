@@ -1,4 +1,6 @@
 import time
+import argparse
+
 
 def fibonacci_1(x):
     if x < 0:
@@ -38,6 +40,14 @@ def fibonacci_3(x):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        prog='Fibonacci',
+        description='Devuelve el n-avo número de la sucesión de fibonacci y el tiempo de ejecución',
+    )
+    parser.add_argument('n')  # positional argument
+    args = parser.parse_args()
+
+    n = int(args.n)
     start_time = time.time()
-    print(fibonacci_3(9))
+    print(fibonacci_1(n))
     print("--- %s seconds ---" % (time.time() - start_time))
