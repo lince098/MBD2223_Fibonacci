@@ -1,6 +1,5 @@
 import time
 
-
 def fibonacci_1(x):
     if x < 0:
         raise ValueError("x no puede ser menor que 0")
