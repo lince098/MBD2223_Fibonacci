@@ -47,7 +47,6 @@ if __name__ == "__main__":
     parser.add_argument('nth', type=int, help="The n-term")  # positional argument
     args = parser.parse_args()
 
-    n = args.n
     start_time = time.time()
-    print(fibonacci_1(n))
+    print(fibonacci_1(args.nth))
     print("--- %s seconds ---" % (time.time() - start_time))
